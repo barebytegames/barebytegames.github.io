@@ -1,0 +1,41 @@
+/* Barebyte policy pages. Plain CSS, system fonts only — nothing is fetched from anywhere. */
+:root {
+  --ink: #16181d;
+  --muted: #59606b;
+  --rule: #d8dbe0;
+  --page: #ffffff;
+  --accent: #0b3d5c;
+  --mark: #f4f6f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e7eaee;
+    --muted: #a2abb6;
+    --rule: #2b3038;
+    --page: #101317;
+    --accent: #9dc9e6;
+    --mark: #171b21;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+  background: var(--page);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+header { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+.brand { font-size: 1.05rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.brand a { color: inherit; text-decoration: none; }
+h1 { font-size: 1.7rem; line-height: 1.25; margin: .4rem 0 .3rem; }
+h2 { font-size: 1.1rem; line-height: 1.3; margin: 2rem 0 .5rem; }
+p, li { margin: .65rem 0; }
+ul { padding-left: 1.15rem; }
+small, .meta { color: var(--muted); font-size: .875rem; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 2rem; }
+.card { background: var(--mark); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.15rem; }
+footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+[lang="vi"] { }

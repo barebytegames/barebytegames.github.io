@@ -1,0 +1,30 @@
+name: Privacy inquiry
+description: Ask a question about a Barebyte privacy policy
+title: "[Privacy] "
+labels: ["privacy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking. This tracker is public, and that is deliberate: an answer here is
+        visible to everyone who has the same question.
+
+        **Please do not include personal information.** None is needed to answer a question about
+        a policy, and Barebyte does not want it.
+  - type: dropdown
+    id: game
+    attributes:
+      label: Which policy is this about?
+      options:
+        - WAKE
+        - This website
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Quote the sentence you are asking about if that helps.
+    validations:
+      required: true
