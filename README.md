@@ -11,6 +11,7 @@ addresses that do not move.
 | WAKE — Privacy Policy | <https://quangducnguyen1205.github.io/privacy/wake/> |
 | Barebyte Content OS — homepage (Google OAuth app homepage) | <https://quangducnguyen1205.github.io/content-os/> |
 | Barebyte Content OS — Privacy Policy (Google OAuth privacy policy) | <https://quangducnguyen1205.github.io/content-os/privacy/> |
+| Barebyte Content OS — TikTok authorization redirect page (static, no scripts) | <https://quangducnguyen1205.github.io/content-os/tiktok/callback/> |
 
 ## What is in here
 
