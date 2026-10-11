@@ -17,6 +17,7 @@ body:
       label: Which policy is this about?
       options:
         - WAKE
+        - Barebyte Content OS
         - This website
         - Something else
     validations:

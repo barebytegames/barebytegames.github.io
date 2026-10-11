@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barebyte Content OS Privacy Policy — Barebyte</title>
+<meta name="description" content="Privacy policy for Barebyte Content OS, Barebyte's private tool for publishing its own game videos to YouTube through the YouTube API Services.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand"><a href="/">Barebyte</a></div>
+</header>
+
+<h1>Barebyte Content OS Privacy Policy</h1>
+<p class="meta">Application: <strong><a href="/content-os/">Barebyte Content OS</a></strong> · Developer:
+<strong>Barebyte</strong> · Effective 11 October 2026</p>
+
+<div class="card">
+<p><strong>The short version.</strong> Barebyte Content OS is a private tool that only Barebyte
+operates, to publish videos of Barebyte's own games to Barebyte's own YouTube channel. It uses the
+<strong>YouTube API Services</strong>. It reads only what it needs to confirm the channel and its own
+uploads, keeps that on Barebyte's computer, and does not sell, share or use it for anything else.</p>
+</div>
+
+<h2>Who this applies to</h2>
+<p>Barebyte Content OS is not offered to the public. The only Google account that connects to it is
+the account that manages Barebyte's YouTube channel, and the only data it handles is that channel's.
+It processes no data about viewers, subscribers or anyone else.</p>
+
+<h2>YouTube API Services</h2>
+<p>Barebyte Content OS uses the YouTube API Services. By connecting a Google account to it, the
+account holder agrees to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+Google's handling of data is described in the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>Permissions requested</h2>
+<p>When the Google account is connected, it is asked to grant exactly two permissions (OAuth scopes):</p>
+<ul>
+  <li><code>https://www.googleapis.com/auth/youtube.upload</code> — to upload a video that a person
+  at Barebyte has approved;</li>
+  <li><code>https://www.googleapis.com/auth/youtube.readonly</code> — to read the connected channel's
+  identity and the videos the tool uploaded.</li>
+</ul>
+<p>No other Google permission is requested.</p>
+
+<h2>What data is accessed, and why</h2>
+<ul>
+  <li><strong>Channel identity:</strong> the channel's id, name, handle and the list of its uploads.
+  Used to confirm, before every upload, that the connected channel is Barebyte's, and to find a
+  video if an upload was interrupted, so that it is not uploaded twice.</li>
+  <li><strong>The tool's own uploads:</strong> each video's id, title, description, tags, privacy
+  setting, upload and processing status, and publication time. Used to confirm that the video
+  arrived on YouTube exactly as it was approved.</li>
+  <li><strong>The authorization token</strong> Google issues when the account grants access. Used
+  only to make the requests above.</li>
+</ul>
+<p>Barebyte Content OS does not access comments, subscribers, viewing history, playlists other than
+the channel's own uploads, analytics, revenue, email, contacts or any other Google data.</p>
+
+<h2>How the data is used</h2>
+<p>Only to publish Barebyte's approved videos and to verify that they were published correctly.
+It is not used for advertising, it is not sold, and it is not used to train any machine-learning or
+artificial-intelligence model.</p>
+<p>Barebyte Content OS's use and transfer of information received from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+including the Limited Use requirements.</p>
+
+<h2>Where the data is kept</h2>
+<p>Barebyte Content OS runs on Barebyte's own computer; Barebyte operates no server for it. The
+authorization token and the channel's identity are stored there, in files that only the operating
+system account running the tool can read. The record of each publication — the video's id, the
+channel's id, the approved title and description, the privacy setting, status and timestamps — is
+stored there too. None of this is placed in a source-code repository or sent anywhere other than to
+Google, as part of the requests described above.</p>
+
+<h2>Sharing</h2>
+<p>None. The data described here is not shared with, sold to or disclosed to any third party. The
+only exchange is between the tool and Google's YouTube API Services, which is how the tool works.
+The videos themselves are published on YouTube at the privacy setting Barebyte approved.</p>
+
+<h2>Retention and deletion</h2>
+<ul>
+  <li>The authorization token is kept until it expires or access is revoked. After that it no longer
+  works, and it is overwritten when access is next granted.</li>
+  <li>Publication records are kept while Barebyte needs them to know what it has published, and
+  are deleted when no longer needed.</li>
+  <li>Deleting the tool's local files removes everything it stored. Videos on YouTube are managed
+  in YouTube itself.</li>
+</ul>
+
+<h2>Revoking access</h2>
+<p>Access can be revoked at any time from the Google account's security settings:
+<a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>.
+After revocation the tool can no longer read the channel or upload to it.</p>
+
+<h2>This website</h2>
+<p>These pages are hosted on <strong>GitHub Pages</strong>. Like any web host, GitHub may process
+ordinary web-request metadata — such as your IP address and user agent — for delivery, abuse
+prevention and security, under GitHub's own practices. These pages set no cookies, load no
+analytics, and load no scripts, fonts or images from third parties.</p>
+
+<h2>Changes to this policy</h2>
+<p>If Barebyte Content OS's use of YouTube data changes — a new permission, new data, a new use —
+this policy will be updated before that change is used, and the effective date above will change
+with it.</p>
+
+<h2 id="contact">Privacy inquiries</h2>
+<p><a href="https://github.com/quangducnguyen1205/quangducnguyen1205.github.io/issues/new?labels=privacy&amp;template=privacy-inquiry.yml"><strong>Open a privacy inquiry</strong></a>
+(GitHub issue tracker for Barebyte's policy pages). Questions are answered publicly, so the answer is
+visible to everyone with the same question.</p>
+<p class="meta">Please do not include personal information in a public issue. None is needed to
+answer a question about this policy.</p>
+
+<footer>
+  <p class="meta"><a href="/">Barebyte</a> · <a href="/content-os/">Barebyte Content OS</a> ·
+  Privacy Policy · effective 11 October 2026</p>
+</footer>
+
+</body>
+</html>

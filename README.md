@@ -9,12 +9,15 @@ addresses that do not move.
 |---|---|
 | Barebyte index | <https://quangducnguyen1205.github.io/> |
 | WAKE — Privacy Policy | <https://quangducnguyen1205.github.io/privacy/wake/> |
+| Barebyte Content OS — homepage (Google OAuth app homepage) | <https://quangducnguyen1205.github.io/content-os/> |
+| Barebyte Content OS — Privacy Policy (Google OAuth privacy policy) | <https://quangducnguyen1205.github.io/content-os/privacy/> |
 
 ## What is in here
 
 ```
 index.html            the Barebyte index
 privacy/wake/         WAKE's privacy policy (English governing, Vietnamese translation below it)
+content-os/           Barebyte Content OS: its homepage and privacy/ (linked from its Google OAuth consent screen)
 style.css             one stylesheet, system fonts only
 .nojekyll             serve the files as they are; no Jekyll build
 ```
