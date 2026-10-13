@@ -1,13 +1,13 @@
-# Barebyte — public policies and support pages
+# Barebyte — landing, policies and support pages
 
-Plain HTML and CSS. This repository exists so Barebyte's games can link to policy pages at
-addresses that do not move.
+Plain HTML and CSS. Barebyte's public landing page (the link in its YouTube and TikTok profiles), and
+the policy pages its games link to, at addresses that do not move.
 
 **Live site:** <https://quangducnguyen1205.github.io/>
 
 | Page | URL |
 |---|---|
-| Barebyte index | <https://quangducnguyen1205.github.io/> |
+| Barebyte landing (games, store links, channels, policies) | <https://quangducnguyen1205.github.io/> |
 | WAKE — Privacy Policy | <https://quangducnguyen1205.github.io/privacy/wake/> |
 | Barebyte Content OS — homepage (Google OAuth app homepage) | <https://quangducnguyen1205.github.io/content-os/> |
 | Barebyte Content OS — Privacy Policy (Google OAuth privacy policy) | <https://quangducnguyen1205.github.io/content-os/privacy/> |
@@ -16,7 +16,7 @@ addresses that do not move.
 ## What is in here
 
 ```
-index.html            the Barebyte index
+index.html            the Barebyte landing page; add a game as one more card under "Games"
 privacy/wake/         WAKE's privacy policy (English governing, Vietnamese translation below it)
 content-os/           Barebyte Content OS: its homepage and privacy/ (linked from its Google OAuth consent screen)
 style.css             one stylesheet, system fonts only
