@@ -3,16 +3,27 @@
 Plain HTML and CSS. Barebyte's public landing page (the link in its YouTube and TikTok profiles), and
 the policy pages its games link to, at addresses that do not move.
 
-**Live site:** <https://quangducnguyen1205.github.io/>
+**Live site:** <https://barebytegames.github.io/>, Barebyte's public landing URL (the `barebytegames`
+organization, since 2026-10-13).
 
 | Page | URL |
 |---|---|
-| Barebyte landing (the studio, its games and store links, channels, policies) | <https://quangducnguyen1205.github.io/> |
-| WAKE — Privacy Policy | <https://quangducnguyen1205.github.io/privacy/wake/> |
-| POLAR — Privacy Policy | <https://quangducnguyen1205.github.io/privacy/polar/> |
-| Barebyte Content OS — homepage (Google OAuth app homepage) | <https://quangducnguyen1205.github.io/content-os/> |
-| Barebyte Content OS — Privacy Policy (Google OAuth privacy policy) | <https://quangducnguyen1205.github.io/content-os/privacy/> |
-| Barebyte Content OS — TikTok authorization redirect page (static, no scripts) | <https://quangducnguyen1205.github.io/content-os/tiktok/callback/> |
+| Barebyte landing (the studio, its games and store links, channels, policies) | <https://barebytegames.github.io/> |
+| WAKE — Privacy Policy | <https://barebytegames.github.io/privacy/wake/> |
+| POLAR — Privacy Policy | <https://barebytegames.github.io/privacy/polar/> |
+| Barebyte Content OS — homepage | <https://barebytegames.github.io/content-os/> |
+| Barebyte Content OS — Privacy Policy | <https://barebytegames.github.io/content-os/privacy/> |
+| Barebyte Content OS — TikTok authorization redirect page (static, no scripts) | <https://barebytegames.github.io/content-os/tiktok/callback/> |
+
+**The previous site stays live and unchanged** at <https://quangducnguyen1205.github.io/>
+(repository `quangducnguyen1205/quangducnguyen1205.github.io`), as compatibility infrastructure. These
+addresses are registered with providers and stores, so they must keep working until each registration is
+moved:
+- the Google OAuth app's homepage and privacy policy (`/content-os/`, `/content-os/privacy/`);
+- the TikTok redirect URI (`/content-os/tiktok/callback/`);
+- the privacy-policy links already given to Google Play.
+
+Privacy inquiries are still taken in that repository's issue tracker; the pages link there.
 
 ## What is in here
 
