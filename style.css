@@ -1,41 +1,74 @@
-/* Barebyte policy pages. Plain CSS, system fonts only — nothing is fetched from anywhere. */
+/* Barebyte pages. Plain CSS, system fonts only — nothing is fetched from anywhere else.
+   Brand: ink #15171C and signal yellow #FFC83D (the studio mark, /brand/barebyte-avatar.svg). */
 :root {
-  --ink: #16181d;
-  --muted: #59606b;
-  --rule: #d8dbe0;
+  --ink: #15171c;
+  --muted: #5a606b;
+  --rule: #d9dbe0;
   --page: #ffffff;
-  --accent: #0b3d5c;
-  --mark: #f4f6f8;
+  --accent: #15171c;
+  --mark: #f6f6f3;
+  --signal: #ffc83d;
+  --on-signal: #15171c;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e7eaee;
-    --muted: #a2abb6;
-    --rule: #2b3038;
-    --page: #101317;
-    --accent: #9dc9e6;
-    --mark: #171b21;
+    --ink: #eceef1;
+    --muted: #a3aab4;
+    --rule: #2c3038;
+    --page: #15171c;
+    --accent: #ffc83d;
+    --mark: #1c1f25;
   }
 }
 * { box-sizing: border-box; }
 body {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 3rem 1.25rem 5rem;
+  padding: 2.25rem 1.25rem 5rem;
   background: var(--page);
   color: var(--ink);
   font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-header { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+header { border-bottom: 3px solid var(--signal); padding-bottom: 1rem; margin-bottom: 2rem; }
 .brand { font-size: 1.05rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.brand a { color: inherit; text-decoration: none; }
+.brand a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: .6rem; }
+/* The studio mark beside the name on every page (decorative: the name is the link text). */
+.brand a::before {
+  content: ""; width: 1.75rem; height: 1.75rem; flex: none; border-radius: 50%;
+  background: url("/brand/barebyte-avatar.svg") center / cover no-repeat;
+}
 h1 { font-size: 1.7rem; line-height: 1.25; margin: .4rem 0 .3rem; }
 h2 { font-size: 1.1rem; line-height: 1.3; margin: 2rem 0 .5rem; }
 p, li { margin: .65rem 0; }
 ul { padding-left: 1.15rem; }
 small, .meta { color: var(--muted); font-size: .875rem; }
-a { color: var(--accent); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .15em; }
+a:hover { text-decoration-thickness: 2px; }
 hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 2rem; }
 .card { background: var(--mark); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.15rem; }
 footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
 [lang="vi"] { }
+
+/* Landing page */
+.hero { display: flex; align-items: center; gap: 1.25rem; margin: .5rem 0 1.25rem; }
+.hero h1 { font-size: 2.1rem; margin: 0; letter-spacing: -.01em; }
+.hero .lede { margin: .25rem 0 0; font-size: 1.1rem; color: var(--muted); }
+.avatar { width: 7rem; height: 7rem; flex: none; border-radius: 50%; display: block; }
+.tag {
+  display: inline-block; margin-left: .4rem; padding: 0 .5rem; border-radius: 99px; font-size: .75rem;
+  font-weight: 600; letter-spacing: .04em; text-transform: uppercase; vertical-align: .1em;
+  background: var(--signal); color: var(--on-signal);
+}
+.button {
+  display: inline-block; margin-right: 1rem; padding: .45rem .9rem; border-radius: 8px; font-weight: 600;
+  text-decoration: none; background: var(--signal); color: var(--on-signal);
+}
+.button:hover { filter: brightness(.95); }
+.game a { white-space: nowrap; }
+.links { list-style: none; padding: 0; }
+.links li { margin: .35rem 0; }
+@media (max-width: 30rem) {
+  .hero { flex-direction: column; align-items: flex-start; gap: .9rem; }
+  .avatar { width: 5.5rem; height: 5.5rem; }
+  .hero h1 { font-size: 1.85rem; }
+}

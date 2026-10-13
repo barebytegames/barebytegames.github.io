@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Barebyte</title>
+  <rect width="1024" height="1024" fill="#FFC83D"/>
+  <g fill="#15171C" transform="translate(461.168 549.574) rotate(-6.64)">
+    <path d="M-190.464 -224.256H119.06A98.304 98.304 0 0 0 224.256 -73.187V190.464A33.792 33.792 0 0 1 190.464 224.256H-190.464A33.792 33.792 0 0 1 -224.256 190.464V-190.464A33.792 33.792 0 0 1 -190.464 -224.256Z"/>
+    <rect x="-59.904" y="-59.904" width="119.808" height="119.808" rx="14.336" transform="translate(273.613 -216.576) rotate(-5.25)"/>
+  </g>
+</svg>
