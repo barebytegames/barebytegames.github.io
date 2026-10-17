@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EXACTLY ZERO Privacy Policy — Barebyte</title>
-<meta name="description" content="Privacy policy for EXACTLY ZERO, an offline Android puzzle game by Barebyte. EXACTLY ZERO collects no personal data and requests no permission; it keeps only which levels you solved, on your device.">
+<meta name="description" content="Privacy policy for EXACTLY ZERO, an offline Android puzzle game by Barebyte. EXACTLY ZERO collects no personal data and requests no permission; it keeps only your progress and two settings, on your device.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <main>
 <h1>EXACTLY ZERO Privacy Policy</h1>
 <p class="meta">Application: EXACTLY ZERO (com.ducnguyen.exactlyzero) · Developer: Barebyte · Platform: Android</p>
-<p class="meta">Effective 15 October 2026.</p>
+<p class="meta">Effective 17 October 2026 (version 0.1.1). Previous version: 15 October 2026.</p>
 
 <p><strong>The short version.</strong> EXACTLY ZERO is an offline puzzle game. It does not collect, transmit,
 sell or share personal information with Barebyte or with anyone else. The released build does not
@@ -29,11 +29,21 @@ purchases and no server of any kind.</p>
 <p>The released build is compiled without the INTERNET permission. That is a property of the
 application package itself: the operating system will not let EXACTLY ZERO open a network connection.</p>
 
+<h2>The update check</h2>
+<p>From version 0.1.1, when EXACTLY ZERO starts or comes back to the screen it asks the <strong>Google Play
+Store app on your phone</strong> whether a newer version of EXACTLY ZERO is waiting, using Google's in-app
+update library, and if one is, shows Google Play's own update screen. EXACTLY ZERO itself still opens no
+network connection and has no INTERNET permission: the question goes to the Play Store app, which handles
+it under <a href="https://policies.google.com/privacy">Google's privacy policy</a>. EXACTLY ZERO receives
+back only whether an update is available and its version number, keeps nothing, and sends nothing to
+Barebyte.</p>
+
 <h2>What EXACTLY ZERO stores</h2>
-<p><strong>One thing, on your device: which levels you have solved.</strong> It is a single number
-kept in the app's private storage (Android's app preferences) so that the level list can mark solved
-levels and you do not lose your progress between sessions. It contains nothing about you — no name,
-no identifier, no time, no score — and EXACTLY ZERO never sends it anywhere.</p>
+<p><strong>Three settings, on your device, and nothing about you:</strong> which levels you have solved
+(so the level list can mark them and you keep your progress), and from version 0.1.1 whether you have
+finished or skipped the tutorial and whether sound is on or off. They are kept in the app's private storage
+(Android's app preferences). They contain no name, no identifier, no time and no score, and EXACTLY ZERO
+never sends them anywhere.</p>
 <p>If you have turned on Android's own device backup, Android may include the app's private storage in
 that backup, under your Google account's settings and Google's privacy policy. Barebyte has no access to
 it. Clearing the app's storage or uninstalling the app deletes it from your device.</p>
@@ -46,7 +56,7 @@ app and nothing to us.</p>
 <h2>Retention and deletion</h2>
 <p>Because Barebyte holds no data about you, there is no account, server-side profile or backup of
 yours for us to delete, and no deletion request to make of us. Uninstalling EXACTLY ZERO removes it and its
-app-private files, including the solved-levels record, from your device.</p>
+app-private files, including the solved levels and settings, from your device.</p>
 
 <h2>Security</h2>
 <p>There is nothing to breach: no server, no account database, no credentials, no transmission.</p>
