@@ -15,7 +15,7 @@
 <main>
 <h1>RIPPLE Privacy Policy</h1>
 <p class="meta">Application: RIPPLE (com.ducnguyen.ripple) · Developer: Barebyte · Platform: Android</p>
-<p class="meta">Effective 16 October 2026 (version 0.2.0). Previous version: 15 October 2026.</p>
+<p class="meta">Effective 17 October 2026 (version 0.3.0). Previous versions: 16 and 15 October 2026.</p>
 
 <p><strong>The short version.</strong> RIPPLE is an offline puzzle game. It does not collect, transmit,
 sell or share personal information with Barebyte or with anyone else. The released build does not
@@ -39,8 +39,15 @@ receives back only whether an update is available and its version number, keeps 
 nothing to Barebyte.</p>
 
 <h2>What RIPPLE stores</h2>
-<p><strong>Nothing about you or your play.</strong> RIPPLE keeps the board you are on in memory only;
-every launch starts at the tutorial. It writes no score, no progress and no settings to your device.</p>
+<p><strong>Your progress, on your device, and nothing about you.</strong> From version 0.3.0
+RIPPLE remembers where you are in the game, so a relaunch does not start over: whether you have
+finished or skipped the tutorial, the level you last opened, the furthest level you have opened, and
+which levels you have solved, each named by the level's own id. That is all it saves. It holds no
+name, no identifier of you or your device and no time, and it is kept in the app's private storage
+(Android's app preferences). RIPPLE never sends it anywhere: it has no way to.</p>
+<p>If you have turned on Android's own device backup, Android may include the app's private storage in
+that backup, under your Google account's settings and Google's privacy policy. Barebyte has no access to
+it. Clearing the app's storage or uninstalling the app deletes it from your device.</p>
 
 <h2>Permissions</h2>
 <p>RIPPLE requests no permission. The application package carries one self-scoped permission generated
@@ -50,7 +57,7 @@ app and nothing to us.</p>
 <h2>Retention and deletion</h2>
 <p>Because Barebyte holds no data about you, there is no account, server-side profile or backup of
 yours for us to delete, and no deletion request to make of us. Uninstalling RIPPLE removes it and its
-app-private files from your device.</p>
+app-private files, including the saved progress, from your device.</p>
 
 <h2>Security</h2>
 <p>There is nothing to breach: no server, no account database, no credentials, no transmission.</p>
