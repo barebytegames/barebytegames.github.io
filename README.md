@@ -38,6 +38,19 @@ style.css             one stylesheet, system fonts only
 .nojekyll             serve the files as they are; no Jekyll build
 ```
 
+## Homepage art and release claims
+
+The public homepage includes POLAR, WAKE, RIPPLE, THREAD and EXACTLY ZERO using the Play Console/API state recorded in Game Kit DL-123 (2026-10-31); it does NOT list HOLD, NEXT or NEVER ERRS as publicly downloadable. Confirm live Production status before adding or removing a download CTA. Avoid claims of universal country availability; Vietnam is excluded from Barebyte's game distribution plan.
+
+`media/` holds **copied original game screenshots / feature art**, not generated fake gameplay. The source Git blob IDs are preserved byte-for-byte when copied into this repository. Game source of truth:
+- `polar/prestore/google-play/phone-screenshots/03-stage5-corridor.png`, `04-stage6-gate.png`, and `feature-graphic-1024x500.png`
+- `wake/prestore/screenshots/01-run.png`
+- `ripple/prestore/google-play/phone-screenshots/03-ripple-mid-cascade.png` and `feature-graphic-1024x500.png`
+- `thread/prestore/google-play/phone-screenshots/04-a-cut-and-its-cost.png` and `feature-graphic-1024x500.png`
+- `exactly-zero/prestore/google-play/phone-screenshots/01-the-long-way-won.png` and `feature-graphic-1024x500.png`
+
+This is the owner's HQ-directed creative redesign (2026-11-01). Growth owns ongoing marketing/SEO feedback and minor landing improvements; HQ keeps cross-studio brand direction. Changes to third-party OAuth callback or policy files are **not** part of homepage redesign authority. Protected `/privacy/`, `/content-os/`, `/growth/`, and brand paths must remain stable.
+
 ## What is deliberately not in here
 
 No game source. No builds, APKs or App Bundles. No signing keys, certificates or passwords. No
@@ -45,8 +58,9 @@ service-account credentials or API tokens. No internal engineering reports or go
 No personal identity documents.
 
 And nothing that runs: no framework, no npm, no build step, no JavaScript, no analytics, no tracking
-pixels, no cookies, no external fonts and no third-party assets. Every page loads exactly three files
-from this repository (the page, `style.css` and the studio mark) and nothing from anywhere else.
+pixels, no cookies, no external fonts and no third-party assets. The homepage additionally loads
+locally hosted, verified first-party screenshots and Play feature artwork from the five actual
+Production game repositories; it does not hotlink private GitHub assets or remote image CDNs.
 
 ## Privacy inquiries
 
