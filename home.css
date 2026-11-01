@@ -54,7 +54,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-proof { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top: 59px; color: #929b9e; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing:.06em; }
 .hero-proof strong { color:#f9f7f0; font-size: 17px; letter-spacing:-.04em; margin-right:6px; }
 .proof-sep { width:1px; height:14px; background:#50585c; }
-.hero-visual { min-height: 520px; position:relative; display:flex; align-items:center; justify-content:center; isolation:isolate; }
+.hero-visual { min-height: 520px; position:relative; display:flex; align-items:center; justify-content:center; }
 .orbit { position:absolute; border: 1px solid rgba(255,200,61,.18); border-radius: 50%; transform: rotate(-19deg); z-index:0; pointer-events:none; }
 .orbit-one { width: 445px; height: 265px; }
 .orbit-two { width: 540px; height: 355px; opacity: .6; }
@@ -74,8 +74,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-sticker a { border-top:1px solid #bcc0b8; display:flex; justify-content:space-between; padding-top:10px; font-size:11px; font-weight:800; }
 .hero-visual-note { position:absolute; right:10px; bottom:-18px; margin:0; color:#778184; font:800 9px/1.2 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.1em; }
 .hero-visual-note span { color:var(--yellow); margin:0 4px; }
-.ticker { background:var(--yellow); color:#13171a; display:flex; justify-content:space-around; gap:20px; align-items:center; padding:13px 18px; font-size:11px; font-weight:900; letter-spacing:.09em; white-space:nowrap; overflow:hidden; }
-.ticker span:nth-child(even){ font-size:14px; }
+.ticker { background:var(--yellow); color:#13171a; padding:13px 18px; font-size:11px; font-weight:900; letter-spacing:.09em; white-space:nowrap; overflow:hidden; }
+.ticker-group { display:flex; justify-content:space-around; align-items:center; gap:20px; }
+.ticker-group span:nth-child(even){ font-size:14px; }
+/* Static ticker (reduced motion): one group, no trailing separator. */
+.ticker-group span:last-child,.ticker-group+.ticker-group { display:none; }
 .section { width:var(--page); margin:auto; padding:110px 0 0; }
 .section-heading { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:38px; }
 .eyebrow-bright { color:var(--yellow); margin-bottom:19px; }
@@ -244,8 +247,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
  .orbit-three{width:510px;height:345px;}
  .hero-visual-note {right:0;}
  /* Two centred rows; the middle separator becomes the line break. */
- .ticker {font-size:9px;flex-wrap:wrap;justify-content:center;gap:5px 14px;padding:10px 11px;}
- .ticker span:nth-child(4) {flex-basis:100%;height:0;overflow:hidden;}
+ .ticker {font-size:9px;padding:10px 11px;}
+ .ticker-group {flex-wrap:wrap;justify-content:center;gap:5px 14px;}
+ .ticker-group span:nth-child(4) {flex-basis:100%;height:0;overflow:hidden;}
  .footer-columns>div {gap:0;}
  .footer-columns a {padding:6px 0;}
  .section {padding-top:75px;}
@@ -316,6 +320,44 @@ button, a { -webkit-tap-highlight-color: transparent; }
  .follow-links a span {display:flex;margin-top:4px;}
  .footer-columns {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px;}
 }
+/* Motion: slow, small, transform/opacity only, and only for viewers who have not asked for less.
+   home.js adds pointer tilt through --tilt-x/--tilt-y; without it everything below still works. */
+@media (prefers-reduced-motion:no-preference){
+ .hero-visual { transform-style:preserve-3d; transform:perspective(1100px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)); transition:transform .5s cubic-bezier(.2,.7,.2,1); }
+ .phone-hero { animation:float 6.5s ease-in-out infinite; }
+ .hero-sticker { translate:0 0 50px; animation:sway 8s ease-in-out infinite; }
+ .orbit-two { animation:spin 140s linear infinite; }
+ .orbit-three { animation:spin 200s linear infinite reverse; }
+ .orbit-dot { animation:pulse 3.2s ease-in-out infinite; }
+ .orbit-dot-b { animation-delay:-1.6s; }
+ .story-letter { animation:drift 9s ease-in-out infinite; }
+ .story-sun { animation:breathe 10s ease-in-out infinite; }
+ .game-card:hover { transform:perspective(900px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(-5px); }
+ .game-card .mini-phone { transition:scale .35s cubic-bezier(.2,.7,.2,1); }
+ .game-card:hover .mini-phone { scale:1.06; }
+ .ticker-track { display:flex; width:max-content; animation:ticker 42s linear infinite; }
+ .ticker:hover .ticker-track { animation-play-state:paused; }
+ .ticker .ticker-group { display:flex; flex-wrap:nowrap; justify-content:space-around; gap:28px; min-width:min(100vw,1920px); padding-right:28px; }
+ .ticker .ticker-group span:last-child { display:inline; }
+ .ticker .ticker-group span:nth-child(4) { flex-basis:auto; height:auto; overflow:visible; }
+ @supports (animation-timeline: view()) {
+  .section-heading,.feature-panel,.collection-heading,.game-card,.story-content>*,.studio-tile,.follow-band { animation:reveal linear both; animation-timeline:view(); animation-range:entry 0% entry 45%; }
+  .phone-feature-front { animation:depth-near linear both; animation-timeline:view(); }
+  .phone-feature-back { animation:depth-far linear both; animation-timeline:view(); }
+  .story-hill-back { animation:depth-far linear both; animation-timeline:view(); }
+  .story-hill-front { animation:depth-near linear both; animation-timeline:view(); }
+ }
+}
+@keyframes float { 0%,100% { translate:0 0 25px; } 50% { translate:0 -12px 25px; } }
+@keyframes sway { 0%,100% { rotate:-1.2deg; } 50% { rotate:1.2deg; } }
+@keyframes spin { to { rotate:360deg; } }
+@keyframes pulse { 0%,100% { scale:1; opacity:1; } 50% { scale:1.5; opacity:.7; } }
+@keyframes drift { 0%,100% { translate:0 0; } 50% { translate:6px -10px; } }
+@keyframes breathe { 0%,100% { scale:1; } 50% { scale:1.04; } }
+@keyframes ticker { to { transform:translateX(-50%); } }
+@keyframes reveal { from { opacity:0; translate:0 32px; } }
+@keyframes depth-near { from { translate:0 36px; } to { translate:0 -36px; } }
+@keyframes depth-far { from { translate:0 -14px; } to { translate:0 14px; } }
 @media (prefers-reduced-motion:reduce){
  html{scroll-behavior:auto;}
  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}

@@ -35,6 +35,7 @@ privacy/wake/         WAKE's privacy policy (English governing, Vietnamese trans
 privacy/polar/        POLAR's privacy policy
 content-os/           Barebyte Content OS: its homepage and privacy/ (linked from its Google OAuth consent screen)
 home.css              the homepage's own stylesheet (only index.html links it)
+home.js               homepage-only pointer tilt (decorative, ~1 KB, no network or storage); policy pages run no scripts
 style.css             policy, Content OS and Growth pages; keep homepage rules out of it
 .nojekyll             serve the files as they are; no Jekyll build
 ```
