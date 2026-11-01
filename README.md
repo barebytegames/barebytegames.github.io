@@ -59,7 +59,7 @@ No game source. No builds, APKs or App Bundles. No signing keys, certificates or
 service-account credentials or API tokens. No internal engineering reports or governance records.
 No personal identity documents.
 
-And nothing that runs: no framework, no npm, no build step, no JavaScript, no analytics, no tracking
+And almost nothing that runs: no framework, no npm, no build step, no JavaScript beyond the homepage's decorative home.js (owner-approved 2026-11-01), no analytics, no tracking
 pixels, no cookies, no external fonts and no third-party assets. The homepage additionally loads
 locally hosted, verified first-party screenshots and Play feature artwork from the five actual
 Production game repositories; it does not hotlink private GitHub assets or remote image CDNs.
