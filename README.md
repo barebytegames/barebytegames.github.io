@@ -34,7 +34,8 @@ brand/                barebyte-avatar.svg, the studio mark. A deployed copy of t
 privacy/wake/         WAKE's privacy policy (English governing, Vietnamese translation below it)
 privacy/polar/        POLAR's privacy policy
 content-os/           Barebyte Content OS: its homepage and privacy/ (linked from its Google OAuth consent screen)
-style.css             one stylesheet, system fonts only
+home.css              the homepage's own stylesheet (only index.html links it)
+style.css             policy, Content OS and Growth pages; keep homepage rules out of it
 .nojekyll             serve the files as they are; no Jekyll build
 ```
 
