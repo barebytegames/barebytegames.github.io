@@ -42,7 +42,7 @@ style.css             policy, Content OS and Growth pages; keep homepage rules o
 
 ## Homepage art and release claims
 
-The public homepage includes POLAR, WAKE, RIPPLE, THREAD and EXACTLY ZERO using the Play Console/API state recorded in Game Kit DL-123 (2026-10-31); it does NOT list HOLD, NEXT or NEVER ERRS as publicly downloadable. Confirm live Production status before adding or removing a download CTA. Avoid claims of universal country availability; Vietnam is excluded from Barebyte's game distribution plan.
+The public homepage features all eight Barebyte Android games: POLAR, WAKE, RIPPLE, THREAD, EXACTLY ZERO, NEXT, HOLD and NEVER ERRS. Game DL-126 (2026-11-02) records all eight as public Production; this is Game-owned publication evidence, not proof of installations. Recheck actual release/territory status before future edits. Avoid universal country-availability claims; Vietnam is excluded from Barebyte's Google Play Production targeting. The official HOLD press kit is /press/hold/; the original media copied from its private Game source must retain identical Git blob SHAs.
 
 `media/` holds **copied original game screenshots / feature art**, not generated fake gameplay. The source Git blob IDs are preserved byte-for-byte when copied into this repository. Game source of truth:
 - `polar/prestore/google-play/phone-screenshots/03-stage5-corridor.png`, `04-stage6-gate.png`, and `feature-graphic-1024x500.png`
@@ -50,6 +50,9 @@ The public homepage includes POLAR, WAKE, RIPPLE, THREAD and EXACTLY ZERO using 
 - `ripple/prestore/google-play/phone-screenshots/03-ripple-mid-cascade.png` and `feature-graphic-1024x500.png`
 - `thread/prestore/google-play/phone-screenshots/04-a-cut-and-its-cost.png` and `feature-graphic-1024x500.png`
 - `exactly-zero/prestore/google-play/phone-screenshots/01-the-long-way-won.png` and `feature-graphic-1024x500.png`
+- `next/prestore/google-play/phone-screenshots/03-plan-one-move-ahead.png`
+- `hold/prestore/google-play/phone-screenshots/01-title.png` through `05-two-warnings.png`, plus original feature graphic and icon (for `/press/hold/`)
+- `never-errs/prestore/google-play/phone-screenshots/03-both-rows.png`
 
 This is the owner's HQ-directed creative redesign (2026-11-01). Growth owns ongoing marketing/SEO feedback and minor landing improvements; HQ keeps cross-studio brand direction. Changes to third-party OAuth callback or policy files are **not** part of homepage redesign authority. Protected `/privacy/`, `/content-os/`, `/growth/`, and brand paths must remain stable.
 
